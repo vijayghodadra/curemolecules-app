@@ -144,6 +144,30 @@
         });
     </script>
 
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const logoLink = document.querySelector('.logo-container');
+            if (logoLink) {
+                let clickCount = 0;
+                let clickTimer;
+                logoLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    clickCount++;
+                    clearTimeout(clickTimer);
+                    if (clickCount === 3) {
+                        window.location.href = "{{ route('admin.login') }}";
+                    } else {
+                        clickTimer = setTimeout(() => {
+                             window.location.href = logoLink.getAttribute('href');
+                             clickCount = 0;
+                        }, 500);
+                    }
+                });
+            }
+        });
+    </script>
+
     @yield('scripts')
 </body>
 </html>
