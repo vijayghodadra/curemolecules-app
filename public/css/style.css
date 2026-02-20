@@ -3034,3 +3034,33 @@ footer {
         justify-content: center;
     }
 }
+/* ===========================
+   QUALITY & CERT MOBILE FIX
+=========================== */
+
+@media (max-width: 768px) {
+    .cert-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 15px; }
+    .cert-card { padding: 25px 15px; }
+    .quality-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 20px; }
+    .quality-container { padding: 40px 20px; }
+    .quality-title { font-size: 1.6rem; margin-bottom: 30px; }
+    .commitment-banner { padding: 40px 20px; }
+}
+
+@media (max-width: 480px) {
+    .cert-grid { grid-template-columns: 1fr !important; }
+    .cert-card { padding: 20px; }
+    .quality-grid { grid-template-columns: 1fr !important; gap: 15px; }
+    .quality-container { padding: 25px 15px; }
+    .quality-title { font-size: 1.4rem; }
+    .commitment-title { font-size: 1.4rem; }
+}
+
+/* MOBILE DROPDOWN FIX */
+@media (max-width: 992px) {
+    .nav-item.active .dropdown-menu { display: block !important; visibility: visible !important; opacity: 1 !important; position: static !important; transform: none !important; box-shadow: none !important; border: none !important; background: rgba(255,255,255,0.04) !important; padding: 5px 0 !important; min-width: 100% !important; border-radius: 8px !important; margin-top: 5px !important; }
+    .nav-item:hover .dropdown-menu { display: none !important; }
+    .nav-item.active:hover .dropdown-menu { display: block !important; }
+    .dropdown-item { padding: 10px 20px !important; display: block; color: var(--nav-link) !important; text-align: center; }
+    .dropdown-item:hover { color: var(--primary) !important; background: var(--dropdown-hover-bg) !important; }
+}
