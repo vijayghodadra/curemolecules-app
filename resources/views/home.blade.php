@@ -7,15 +7,14 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content" data-aos="fade-up">
-                <h1>CureMolecules – High-Purity<br>Pharmaceutical APIs & Excipients</h1>
-                <p class="company-name-hero">Cure Molecules Private Limited – Your Trusted Manufacturing Partner</p>
+                <h1>DevSeas Global</h1>
+                <p class="company-name-hero">"Global Reach, Diverse Products"</p>
+                <p class="company-name-hero" style="font-style: italic;">"Delivering Quality Across Continents."</p>
 
                 <div class="info-box" data-aos="fade-up" data-aos-delay="200">
                     <p>
                         <i class="fas fa-check-circle" style="color: var(--primary);"></i>
-                        <span class="highlight">CureMolecules specializes in IP/BP/USP grade</span> pharmaceutical APIs,
-                        antacids, electrolytes, and excipients. Cure Molecules delivers premium quality chemicals for
-                        pharmaceutical, nutraceutical, and food industries worldwide.
+                        <span class="highlight">DevSeas Global specializes in premium export solutions</span> — connecting international markets with reliable, efficient, and high-quality products tailored to every business need.
                     </p>
                 </div>
 
@@ -42,36 +41,44 @@
             </div>
 
             <div class="category-grid">
-                <!-- Card 1: Antacids -->
+                <!-- Card 1: Agri Commodities -->
                 <div class="category-card card-antacids" data-aos="fade-up" data-aos-delay="100">
-                    <div class="cat-icon"><i class="fas fa-capsules"></i></div>
-                    <h3>Antacids & Laxatives</h3>
-                    <p>Dried aluminium hydroxide gel, magnesium hydroxide, magnesium trisilicate and carbonate compounds</p>
-                    <a href="{{ route('products.index') }}" class="cat-badge">5+ Products</a>
+                    <div class="cat-icon"><i class="fas fa-seedling"></i></div>
+                    <h3>Agri Commodities</h3>
+                    <p>We specializes in exporting top-quality agri commodities, including grains, pulses, and spices. Sourced from reliable farms, our products guarantee exceptional quality and sustainability for various markets.</p>
+                    <a href="{{ route('products.index') }}" class="cat-badge">View Products</a>
                 </div>
 
-                <!-- Card 2: Food & Pharma -->
+                <!-- Card 2: Plastic Packaging -->
                 <div class="category-card card-food" data-aos="fade-up" data-aos-delay="200">
-                    <div class="cat-icon"><i class="fas fa-jar"></i></div>
-                    <h3>Food & Beverages & Pharmaceuticals</h3>
-                    <p>Citric acid, dextrose, sodium chloride, potassium chloride, and citrate compounds</p>
-                    <a href="{{ route('products.index') }}" class="cat-badge">8+ Products</a>
+                    <div class="cat-icon"><i class="fas fa-box"></i></div>
+                    <h3>Plastic Packaging</h3>
+                    <p>We offers high-quality plastic packaging solutions designed for durability, versatility, and sustainability. Our range includes bags, films, and containers tailored to meet diverse industrial and consumer needs.</p>
+                    <a href="{{ route('products.index') }}" class="cat-badge">View Products</a>
                 </div>
 
-                <!-- Card 3: ORS -->
+                <!-- Card 3: Chemical -->
                 <div class="category-card card-ors" data-aos="fade-up" data-aos-delay="300">
-                    <div class="cat-icon"><i class="fas fa-syringe"></i></div>
-                    <h3>ORS & Injectables</h3>
-                    <p>Dextrose, potassium chloride, sodium chloride, and citrate compounds for medical solutions</p>
-                    <a href="{{ route('products.index') }}" class="cat-badge">6+ Products</a>
+                    <div class="cat-icon"><i class="fas fa-flask"></i></div>
+                    <h3>Chemical</h3>
+                    <p>Devseas Global offers a wide range of high-quality chemical products tailored for various industries, including agriculture, manufacturing, and pharmaceuticals, ensuring safety, efficacy, and reliability.</p>
+                    <a href="{{ route('products.index') }}" class="cat-badge">View Products</a>
                 </div>
 
-                <!-- Card 4: Pharma & Nutra -->
+                <!-- Card 4: Packaging -->
                 <div class="category-card card-pharma" data-aos="fade-up" data-aos-delay="400">
-                    <div class="cat-icon"><i class="fas fa-dna"></i></div>
-                    <h3>Pharmaceuticals & Nutraceuticals & Cosmetics</h3>
-                    <p>Aluminium magnesium silicate, magnesium compounds, zinc sulphates, and specialized ingredients</p>
-                    <a href="{{ route('products.index') }}" class="cat-badge">10+ Products</a>
+                    <div class="cat-icon"><i class="fas fa-utensils"></i></div>
+                    <h3>Packaging</h3>
+                    <p>Specializes in high-quality disposable fast food paper products, including trays, bags, and wrappers. Our eco-friendly solutions cater to the fast-paced food industry, ensuring food safety and ease of use.</p>
+                    <a href="{{ route('products.index') }}" class="cat-badge">View Products</a>
+                </div>
+
+                <!-- Card 5: Medicare -->
+                <div class="category-card card-antacids" data-aos="fade-up" data-aos-delay="500">
+                    <div class="cat-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3>Medicare</h3>
+                    <p>Devseas Global provides a comprehensive range of medicare products, prioritizing safety, reliability, and quality. Our solutions cater to diverse healthcare needs, ensuring efficient support for medical professionals.</p>
+                    <a href="{{ route('products.index') }}" class="cat-badge">View Products</a>
                 </div>
             </div>
         </div>
@@ -97,8 +104,9 @@
                             <img src="{{ asset('storage/' . $product->image_path) }}" 
                                  style="border-radius: 8px; max-height: 150px; width: auto;" alt="{{ $product->name }}">
                         @else
-                            <img src="https://img.icons8.com/color/96/pill.png" 
-                                 style="border-radius: 8px;" alt="Product Image">
+                            <div style="width:80px; height:80px; border-radius:50%; background:linear-gradient(135deg,#38bdf8,#6366f1); display:inline-flex; align-items:center; justify-content:center; margin:0 auto;">
+                                <i class="fas fa-flask" style="font-size:32px; color:#fff;"></i>
+                            </div>
                         @endif
                     </div>
 
@@ -133,7 +141,7 @@
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2>Quality & Certifications</h2>
-                <p>At Cure Molecules Pvt. Ltd., quality is the foundation of our manufacturing excellence.</p>
+                <p>At DevSeas Global Pvt. Ltd., quality is the foundation of our manufacturing excellence.</p>
             </div>
 
             <p class="cert-text" data-aos="fade-up" data-aos-delay="100">
@@ -144,52 +152,36 @@
             </p>
 
             <div class="cert-grid">
-                <!-- ISO 9001 -->
+                <!-- HACCP -->
                 <div class="cert-card cert-iso9001" data-aos="fade-up" data-aos-delay="200">
-                    <div class="cert-icon"><i class="fas fa-trophy"></i></div>
-                    <h3>ISO 9001:2015</h3>
-                    <p>Quality Management System</p>
-                    <span class="valid-pill">Valid until 2025</span>
-                </div>
-
-                <!-- ISO 14001 -->
-                <div class="cert-card cert-iso14001" data-aos="fade-up" data-aos-delay="300">
-                    <div class="cert-icon"><i class="fas fa-seedling"></i></div>
-                    <h3>ISO 14001:2015</h3>
-                    <p>Environmental Management</p>
-                    <span class="valid-pill">Valid until 2025</span>
+                    <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>HACCP</h3>
+                    <p>Hazard Analysis Critical Control Point</p>
+                    <span class="valid-pill">Certified</span>
                 </div>
 
                 <!-- GMP -->
-                <div class="cert-card cert-gmp" data-aos="fade-up" data-aos-delay="400">
+                <div class="cert-card cert-gmp" data-aos="fade-up" data-aos-delay="300">
                     <div class="cert-icon"><i class="fas fa-check-square"></i></div>
                     <h3>GMP Certified</h3>
                     <p>Good Manufacturing Practice</p>
-                    <span class="valid-pill">Valid until 2024</span>
+                    <span class="valid-pill">Certified</span>
                 </div>
 
-                <!-- Halal -->
-                <div class="cert-card cert-halal" data-aos="fade-up" data-aos-delay="500">
-                    <div class="cert-icon"><i class="fas fa-moon"></i></div>
-                    <h3>Halal Certified</h3>
-                    <p>Halal Food Standards</p>
-                    <span class="valid-pill">Valid until 2024</span>
+                <!-- ISO 9001:2015 -->
+                <div class="cert-card cert-iso14001" data-aos="fade-up" data-aos-delay="400">
+                    <div class="cert-icon"><i class="fas fa-trophy"></i></div>
+                    <h3>ISO 9001:2015</h3>
+                    <p>Quality Management System</p>
+                    <span class="valid-pill">Certified</span>
                 </div>
 
-                 <!-- FDA -->
-                 <div class="cert-card cert-fda" data-aos="fade-up" data-aos-delay="600">
-                    <div class="cert-icon"><i class="fas fa-university"></i></div>
-                    <h3>FDA Registered</h3>
-                    <p>Food & Drug Administration</p>
-                    <span class="valid-pill">Valid until 2024</span>
-                </div>
-
-                <!-- Kosher -->
-                <div class="cert-card cert-kosher" data-aos="fade-up" data-aos-delay="700">
-                    <div class="cert-icon"><i class="fas fa-star-of-david"></i></div>
-                    <h3>KOSHER Certified</h3>
-                    <p>Kosher Food Standards</p>
-                    <span class="valid-pill">Valid until 2024</span>
+                <!-- IEC -->
+                <div class="cert-card cert-fda" data-aos="fade-up" data-aos-delay="500">
+                    <div class="cert-icon"><i class="fas fa-ship"></i></div>
+                    <h3>IEC</h3>
+                    <p>Import Export Code</p>
+                    <span class="valid-pill">Registered</span>
                 </div>
             </div>
         </div>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CureMolecules - @yield('title', 'High-Purity Pharmaceutical APIs & Excipients')</title>
+    <title>{{ config('app.name', 'DevSeas Global') }} - @yield('title', 'High-Purity Pharmaceutical APIs & Excipients')</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
@@ -17,13 +17,17 @@
     <header>
         <div class="container navbar">
             <a href="{{ route('home') }}" class="logo-container" style="text-decoration: none;">
-                <img src="{{ asset('assets/images/DEVSEAS logo.png') }}" alt="Cure Molecules" class="site-logo">
+                <img src="{{ asset('assets/images/DEVSEAS logo.png') }}" alt="DevSeas Global" class="site-logo">
             </a>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
 
             <ul class="nav-menu">
                 <li><a href="/" class="{{ request()->is('/') ? 'active' : '' }}">Home</a></li>
                 <li class="nav-item">
-                    <a href="{{ route('products.index') }}">Products <i class="fas fa-chevron-down" style="font-size: 0.7em;"></i></a>
+                    <a href="{{ route('products.index') }}" onclick="toggleDropdown(event, this)">Products <i class="fas fa-chevron-down" style="font-size: 0.7em;"></i></a>
                     <div class="dropdown-menu">
                         <a href="{{ route('products.index') }}" class="dropdown-item">All Products</a>
                         <a href="{{ route('products.index') }}" class="dropdown-item">Antacids & Laxatives</a>
@@ -34,7 +38,7 @@
                 </li>
                 <li><a href="{{ url('/about') }}">About Us</a></li>
                 <li class="nav-item">
-                    <a href="{{ url('/services') }}">Services <i class="fas fa-chevron-down" style="font-size: 0.7em;"></i></a>
+                    <a href="{{ url('/services') }}" onclick="toggleDropdown(event, this)">Services <i class="fas fa-chevron-down" style="font-size: 0.7em;"></i></a>
                     <div class="dropdown-menu">
                         <a href="{{ url('/services') }}" class="dropdown-item">Chemical Trading</a>
                         <a href="{{ url('/quality') }}" class="dropdown-item">Quality Assurance</a>
@@ -50,6 +54,40 @@
         </div>
     </header>
 
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('mobile-menu');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if(menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                const icon = menuToggle.querySelector('i');
+                if (navMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        }
+
+        // Mobile Dropdown Toggle
+        function toggleDropdown(e, link) {
+            if (window.innerWidth <= 992) {
+                e.preventDefault();
+                const parent = link.parentElement;
+                parent.classList.toggle('active');
+                
+                // Close other dropdowns
+                document.querySelectorAll('.nav-item').forEach(item => {
+                    if (item !== parent) item.classList.remove('active');
+                });
+            }
+        }
+    </script>
+
     @yield('content')
 
     <!-- Enhanced Footer -->
@@ -58,12 +96,10 @@
             <div class="footer-top">
                 <div class="footer-logo-col">
                     <div class="logo-container" style="background: transparent; color: white; padding: 0;">
-                        <i class="fas fa-cubes fa-2x" style="color: var(--primary);"></i>
-                        <div class="logo-text" style="color: white;">
-                            CURE<br>MOLECULES<br><small style="color: #94a3b8;">PRIVATE LIMITED</small>
-                        </div>
+                        <img src="{{ asset('assets/images/DEVSEAS logo.png') }}" alt="DevSeas" style="height:40px; width:auto;">
+
                     </div>
-                    <p>Global leader in immediate relief antacid actives, electrolytes, and pharmaceutical excipients. Specializing in Aluminium, Magnesium and Potassium products with strict quality control and IP/BP/USP compliance.</p>
+                    <p>We are committed to empowering businesses worldwide by offering premium export solutions tailored to their unique needs. With extensive experience and a profound understanding of international markets, we take pride in delivering exceptional service, unmatched reliability, and outstanding value.</p>
                     <div class="social-icons">
                         <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
@@ -95,34 +131,37 @@
                     <ul class="contact-info-list">
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>B-408, Rudra Arcade, Near Sunflower Women's Hospital – Helmet Cross Road, Memnagar, Ahmedabad – 380052</span>
+                            <span>FF-16 Kanha Luxuria, Savita Hospital Road, Parivar Char Rasta, Vadodara, Gujarat 390025</span>
                         </li>
                         <li>
                             <i class="fas fa-phone-alt"></i>
-                            <span>+91–9725597101, +91–7383565553</span>
+                            <span>
+                                <a href="tel:+4915560547524" style="color: inherit; text-decoration: none;">+49 15560 547524</a>, 
+                                <a href="tel:+916352322122" style="color: inherit; text-decoration: none;">+91 63523 22122</a>
+                            </span>
                         </li>
                         <li>
                             <i class="fas fa-envelope"></i>
-                            <span>divy@curemolecules.com</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-user"></i>
-                            <span>Mr. Divya Patel (Director)</span>
-                        </li>
-                         <li>
-                            <i class="fas fa-user"></i>
-                            <span>Mr. Vishal Patel (Director)</span>
+                            <span>info@devseasglobal.com</span>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="footer-bottom">
-                <p>2024 Cure Molecules Private Limited. All rights reserved.</p>
-                <div class="footer-bottom-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Quality Policy</a>
+            <div class="footer-bottom" style="flex-direction: column; gap: 15px;">
+                <div style="display: flex; justify-content: space-between; width: 100%; align-items: center; flex-wrap: wrap; gap: 10px;">
+                    <p style="margin: 0;">&copy; 2026 DevSeas Global. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Quality Policy</a>
+                    </div>
+                </div>
+                <div class="powered-by" style="display: flex; align-items: center; gap: 10px; font-size: 0.9em; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px; width: 100%; justify-content: center;">
+                    <span style="color: #cbd5e1;">Powered by TejasKP AI Software</span>
+                    <a href="https://tejaskp.in/login" target="_blank" style="text-decoration: none;">
+                        <img src="{{ asset('assets/images/tejaskp_logo.png') }}" alt="TejasKP AI Software" style="height: 25px; vertical-align: middle; filter: drop-shadow(0 0 2px rgba(255,255,255,0.3));">
+                    </a>
                 </div>
             </div>
         </div>
@@ -147,23 +186,14 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const logoLink = document.querySelector('.logo-container');
-            if (logoLink) {
-                let clickCount = 0;
-                let clickTimer;
-                logoLink.addEventListener('click', (e) => {
+            // Footer D logo — double-click to open Admin Dashboard
+            const footerLogo = document.querySelector('.footer-logo-col img');
+            if (footerLogo) {
+                footerLogo.addEventListener('dblclick', (e) => {
                     e.preventDefault();
-                    clickCount++;
-                    clearTimeout(clickTimer);
-                    if (clickCount === 3) {
-                        window.location.href = "{{ route('admin.login') }}";
-                    } else {
-                        clickTimer = setTimeout(() => {
-                             window.location.href = logoLink.getAttribute('href');
-                             clickCount = 0;
-                        }, 500);
-                    }
+                    window.location.href = "{{ route('admin.login') }}";
                 });
+                footerLogo.style.cursor = 'pointer';
             }
         });
     </script>

@@ -8,9 +8,8 @@
         <div class="container">
             <h1 data-aos="fade-down">Contact Us</h1>
             <p data-aos="fade-up" data-aos-delay="200">
-                Get in touch with Cure Molecules Private Limited –<br>
-                Global leader in immediate relief antacid actives,<br>
-                electrolytes, and pharmaceutical excipients
+                Reach out to Devseas Global for any inquiries about our premium products.<br>
+                Let's work together to meet your needs with excellence and reliability.
             </p>
             <div class="breadcrumbs" data-aos="fade-up" data-aos-delay="300">
                 <a href="{{ url('/') }}">Home</a> <i class="fas fa-chevron-right"></i> <span>Contact</span>
@@ -29,7 +28,7 @@
                     <div class="c-details">
                         <h4>Email Us</h4>
                         <p>Feel free to contact us at</p>
-                        <a href="mailto:Divy@curemolecules.com">Divy@curemolecules.com</a>
+                        <a href="mailto:info@devseasglobal.com">info@devseasglobal.com</a>
                         <p class="small-text">we'll respond promptly</p>
                     </div>
                 </div>
@@ -39,9 +38,9 @@
                     <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
                     <div class="c-details">
                         <h4>Address</h4>
-                        <p>B-408, Rudra Arcade, Near Sunflower Women's Hospital<br>
-                            – Helmet Cross Road,<br>
-                            Memnagar, Ahmedabad - 380052</p>
+                        <p>FF-16 Kanha Luxuria, Savita Hospital Road,<br>
+                            Parivar Char Rasta,<br>
+                            Vadodara, Gujarat 390025</p>
                     </div>
                 </div>
 
@@ -50,8 +49,8 @@
                     <div class="c-icon"><i class="fas fa-phone-alt"></i></div>
                     <div class="c-details">
                         <h4>Call Us</h4>
-                        <a href="tel:+919725597101">+91-9725597101</a>, <a href="tel:+917383565553">+91-7383565553</a>
-                        <p>Managing Director: +91-9924739139</p>
+                        <a href="tel:+4915560547524">+49 15560 547524</a><br>
+                        <a href="tel:+916352322122">+91 63523 22122</a>
                     </div>
                 </div>
             </div>
@@ -59,7 +58,7 @@
             <!-- Map -->
             <div class="contact-map" data-aos="zoom-in" data-aos-delay="400">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.535805213697!2d72.5492!3d23.0415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84f5011b9319%3A0x6295536555555555!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1625636000000!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.0673895916357!2d73.19!3d22.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc5f4e7d8db71%3A0x6d6f1d1db9e0ef7f!2sParivar%20Char%20Rasta%2C%20Vadodara%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
                     width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>

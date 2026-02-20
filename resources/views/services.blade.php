@@ -6,7 +6,7 @@
 <div class="page-header">
     <div class="container">
         <h1 data-aos="fade-down">Chemical Trading</h1>
-        <p data-aos="fade-up" data-aos-delay="200">Cure Molecules Pvt. Ltd. offers comprehensive chemical trading services, connecting global suppliers with customers worldwide. Our extensive network ensures reliable supply chains for industrial chemicals, solvents, acids, and specialty compounds.</p>
+        <p data-aos="fade-up" data-aos-delay="200">Devseas Global offers a wide range of high-quality chemical products tailored for various industries, including agriculture, manufacturing, and pharmaceuticals. Our chemicals are produced under strict quality control standards, ensuring safety, efficacy, and reliability for all applications.</p>
     </div>
 </div>
 

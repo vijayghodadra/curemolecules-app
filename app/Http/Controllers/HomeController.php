@@ -9,7 +9,12 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $featuredProducts = Product::take(4)->get();
+        try {
+            $featuredProducts = Product::take(4)->get();
+        }
+        catch (\Exception $e) {
+            $featuredProducts = collect(); // Return empty collection if DB fail
+        }
         return view('home', compact('featuredProducts'));
     }
 

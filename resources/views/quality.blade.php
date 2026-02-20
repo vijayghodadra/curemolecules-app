@@ -6,11 +6,7 @@
 <div class="page-header">
     <div class="container">
         <h1 data-aos="fade-down">Quality Assurance</h1>
-        <p data-aos="fade-up" data-aos-delay="200">
-            At Cure Molecules Pvt. Ltd, quality is the foundation of our manufacturing excellence. As a trusted producer of high-purity excipients and cosmetic ingredients — including Dried Aluminium Hydroxide, Magnesium Hydroxide, Potassium Chloride, Sodium Chloride, Sodium Citrate, Dextrose, and many more — we ensure that every product reflects our commitment to safety, consistency, and global compliance.
-            <br><br>
-            We manufacture products in IP, BP, USP grades, and we also supply EP & JP & Food grades upon customer requirement, ensuring complete flexibility for diverse market needs.
-        </p>
+        <p data-aos="fade-up" data-aos-delay="200">DevSeas Global specializes in high-quality disposable fast food paper products, including trays, bags, and wrappers. Designed for convenience and durability, our eco-friendly solutions cater to the fast-paced food industry, ensuring food safety and ease of use for restaurants and takeout services.</p>
     </div>
 </div>
 

@@ -8,7 +8,7 @@
 
     <div class="page-header">
         <div class="container">
-            <h1 data-aos="fade-down">About Cure Molecules</h1>
+            <h1 data-aos="fade-down">About DevSeas Global</h1>
             <p data-aos="fade-up" data-aos-delay="200">Driving innovation in pharmaceutical manufacturing since 2010.</p>
         </div>
     </div>
@@ -18,10 +18,9 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-text-col" data-aos="fade-right">
-                    <h2 class="section-title">Who We Are</h2>
-                    <p>With over a decade of expertise, <strong>Cure Molecules Pvt. Ltd.</strong> has evolved into a leading and trusted manufacturer of high-quality excipients and specialty cosmetic ingredients. What began as a small, determined venture has now grown into a dynamic organization recognized for its reliability, innovation, and uncompromising commitment to quality.</p>
-                    <p>Today, <strong>Cure Molecules</strong> proudly delivers a wide portfolio of premium-grade products, including Aluminium Hydroxide Paste & Gel, Magnesium Hydroxide, Dextrose Monohydrate, Dextrose Anhydrous, Potassium Chloride, Sodium Chloride, Sodium Citrate, Potassium Citrate, Zinc Sulphate, and several other customized materials tailored to diverse industry needs.</p>
-                    <p>Our products are available in <strong>IP, BP, USP grades</strong>, and we also manufacture EP & JP grades on request — offering complete flexibility for global pharmaceutical, nutraceutical, food, and cosmetic manufacturers.</p>
+                    <h2 class="section-title">Connecting Global Markets with Expertise and Trust</h2>
+                    <p>At <strong>Devseas Global</strong>, we are committed to empowering businesses worldwide by offering premium export solutions tailored to their unique needs. With extensive experience and a profound understanding of international markets, we take pride in delivering exceptional service, unmatched reliability, and outstanding value.</p>
+                    <p>Our team of seasoned experts excels in sourcing, logistics, and compliance, ensuring that every product reaches its destination efficiently and adheres to global standards. From meticulous documentation to streamlined freight management, we handle every detail, making the export process smooth and worry-free for our clients.</p>
                     
                     <div class="about-stats-row">
                          <div class="stat-item">
@@ -40,7 +39,7 @@
 
                 </div>
                 <div class="about-image-col" data-aos="fade-left">
-                    <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Laboratory" class="about-img">
+                    <img src="{{ asset('assets/images/Boatimg.jpg') }}" alt="Cargo Ship at Port" class="about-img">
                 </div>
             </div>
         </div>
@@ -55,14 +54,14 @@
                         <i class="fas fa-bullseye"></i>
                     </div>
                     <h3>Our Vision</h3>
-                    <p>To become a globally preferred partner for high-purity excipients and specialty ingredients, driven by integrity, innovation, and continuous improvement.</p>
+                    <p>To connect global markets by delivering reliable, efficient, and high-quality export solutions. We strive to empower businesses worldwide through exceptional service, ethical practices, and a commitment to excellence, fostering long-lasting partnerships built on trust and mutual growth.</p>
                 </div>
                 <div class="mission-card" data-aos="flip-left" data-aos-delay="200">
                     <div class="mission-icon">
                         <i class="fas fa-rocket"></i>
                     </div>
                     <h3>Our Mission</h3>
-                    <p>To deliver world-class products that enhance the quality and performance of formulations across industries — while building long-term partnerships founded on trust, transparency, and excellence.</p>
+                    <p>To be a global leader in export solutions, renowned for our innovation, integrity, and unwavering dedication to customer success. We aim to bridge international markets, creating a world where businesses thrive through seamless trade and sustainable partnerships.</p>
                 </div>
                  <div class="mission-card" data-aos="flip-left" data-aos-delay="300">
                     <div class="mission-icon">

@@ -6,11 +6,7 @@
 <div class="page-header">
     <div class="container">
         <h1 data-aos="fade-down">Global Logistics & Distribution</h1>
-        <p data-aos="fade-up" data-aos-delay="200">
-            At Cure Molecules Pvt. Ltd., we understand that timely, safe, and efficient delivery is just as important as product quality. With a strong global logistics network and streamlined distribution systems, we ensure that our high-purity excipients and cosmetic ingredients reach customers across the world with speed, safety, and reliability.
-            <br><br>
-            Our logistics team is equipped to manage domestic as well as international shipments with full compliance to regulatory, packaging, and transportation standards for pharmaceutical, cosmetic, and food-grade materials.
-        </p>
+        <p data-aos="fade-up" data-aos-delay="200">It includes planning, transport, customs compliance, freight handling, warehousing, and delivery so that goods reach customers or markets worldwide on time and in good condition. In practice this means coordinating the flow of products from manufacturers or suppliers through shipping networks and storage points to final destinations while managing documentation, compliance, and cost optimization.</p>
     </div>
 </div>
 
@@ -49,12 +45,7 @@
                 <h3>Fast Dispatch & On-Time Delivery</h3>
                 <p>Our optimized supply chain, ready inventory, and efficient coordination help reduce lead times and ensure punctual delivery worldwide</p>
             </div>
-            <!-- 4. Documentation -->
-            <div class="logistics-card" data-aos="fade-up" data-aos-delay="400">
-                <div class="logistics-icon"><i class="fas fa-file-contract"></i></div>
-                <h3>Complete Export Documentation</h3>
-                <p>We offer full support including MSDS, Technical Data Sheets, Packing List, Invoice, COO, and Regulatory Compliance Papers for smooth international shipments</p>
-            </div>
+
             <!-- 5. Flexible Shipping -->
             <div class="logistics-card" data-aos="fade-up" data-aos-delay="500">
                 <div class="logistics-icon"><i class="fas fa-truck-loading"></i></div>
@@ -111,7 +102,7 @@
     <div class="container">
         <div class="promise-banner" data-aos="fade-up">
             <h2>Our Distribution Promise</h2>
-            <p>We are committed to delivering your products safely, efficiently, and on time — anywhere in the world. With robust planning, world-class logistics partners, and a dedicated customer support team, Cure Molecules Pvt. Ltd. ensures smooth global distribution for every order.</p>
+            <p>Our team of seasoned experts excels in sourcing, logistics, and compliance, ensuring that every product reaches its destination efficiently and adheres to global standards. From meticulous documentation to streamlined freight management, we handle every detail, making the export process smooth and worry-free for our clients.</p>
         </div>
     </div>
 </section>
