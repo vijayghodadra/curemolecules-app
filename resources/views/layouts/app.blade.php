@@ -151,12 +151,27 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Footer D logo — double-click to open Admin Dashboard
+            // Footer D logo — 3 clicks to open Admin Dashboard
             const footerLogo = document.querySelector('.footer-logo-col img');
+            let clickCount = 0;
+            let clickTimer;
+            
             if (footerLogo) {
-                footerLogo.addEventListener('dblclick', (e) => {
+                footerLogo.addEventListener('click', (e) => {
                     e.preventDefault();
-                    window.location.href = "{{ route('admin.login') }}";
+                    clickCount++;
+                    
+                    if (clickCount === 1) {
+                        clickTimer = setTimeout(() => {
+                            clickCount = 0;
+                        }, 1000);
+                    }
+                    
+                    if (clickCount === 3) {
+                        clearTimeout(clickTimer);
+                        clickCount = 0;
+                        window.location.href = "{{ route('admin.login') }}";
+                    }
                 });
                 footerLogo.style.cursor = 'pointer';
             }
