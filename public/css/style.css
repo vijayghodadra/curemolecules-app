@@ -3064,3 +3064,17 @@ footer {
     .dropdown-item { padding: 10px 20px !important; display: block; color: var(--nav-link) !important; text-align: center; }
     .dropdown-item:hover { color: var(--primary) !important; background: var(--dropdown-hover-bg) !important; }
 }
+
+/* Center WhatsApp button on mobile */
+@media (max-width: 480px) {
+    .whatsapp-float {
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
+        bottom: 20px;
+        z-index: 1000;
+    }
+    .whatsapp-float:hover {
+        transform: translateX(-50%) scale(1.1);
+    }
+}
