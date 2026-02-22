@@ -54,39 +54,7 @@
         </div>
     </header>
 
-    <script>
-        // Mobile Menu Toggle
-        const menuToggle = document.getElementById('mobile-menu');
-        const navMenu = document.querySelector('.nav-menu');
 
-        if(menuToggle && navMenu) {
-            menuToggle.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-                const icon = menuToggle.querySelector('i');
-                if (navMenu.classList.contains('active')) {
-                    icon.classList.remove('fa-bars');
-                    icon.classList.add('fa-times');
-                } else {
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
-            });
-        }
-
-        // Mobile Dropdown Toggle
-        function toggleDropdown(e, link) {
-            if (window.innerWidth <= 992) {
-                e.preventDefault();
-                const parent = link.parentElement;
-                parent.classList.toggle('active');
-                
-                // Close other dropdowns
-                document.querySelectorAll('.nav-item').forEach(item => {
-                    if (item !== parent) item.classList.remove('active');
-                });
-            }
-        }
-    </script>
 
     @yield('content')
 
@@ -201,3 +169,4 @@
     @yield('scripts')
 </body>
 </html>
+
