@@ -397,7 +397,13 @@ header {
 
 @media (max-width: 480px) {
     .whatsapp-float {
-        right: 5vw; /* Align relative to the 90% container width on mobile */
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .whatsapp-float:hover {
+        transform: translateX(-50%) scale(1.1);
     }
 }
 
@@ -3076,5 +3082,6 @@ footer {
         transform: translateX(-50%) scale(1.1);
     }
 }
+
 
 
