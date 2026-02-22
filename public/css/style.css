@@ -376,7 +376,7 @@ header {
 .whatsapp-float {
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    right: max(30px, calc((100vw - 1400px) / 2 + 30px)); /* Bind to container max-width */
     background-color: #25d366;
     color: white;
     width: 60px;
@@ -393,6 +393,12 @@ header {
 
 .whatsapp-float:hover {
     transform: scale(1.1);
+}
+
+@media (max-width: 480px) {
+    .whatsapp-float {
+        right: 5vw; /* Align relative to the 90% container width on mobile */
+    }
 }
 
 /* Container Utility */
@@ -3070,4 +3076,5 @@ footer {
         transform: translateX(-50%) scale(1.1);
     }
 }
+
 
