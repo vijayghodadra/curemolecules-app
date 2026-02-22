@@ -135,10 +135,7 @@
         </div>
     </footer>
 
-    <!-- Floating WhatsApp -->
-    <a href="#" class="whatsapp-float">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    
 
     <!-- Antigravity: AOS Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -169,4 +166,5 @@
     @yield('scripts')
 </body>
 </html>
+
 
