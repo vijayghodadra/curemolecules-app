@@ -49,9 +49,7 @@
                 <li><a href="{{ route('admin.login') }}" class="nav-login-btn">Login <i class="fas fa-sign-in-alt"></i></a></li>
             </ul>
 
-            <div class="theme-toggle">
-                <i class="fas fa-sun"></i>
-            </div>
+            
         </div>
     </header>
 
@@ -194,5 +192,6 @@
     @yield('scripts')
 </body>
 </html>
+
 
 
