@@ -53,7 +53,7 @@
         </div>
     </header>
 
-('content')
+    @yield('content')
 
     <!-- Enhanced Footer -->
     <footer class="main-footer" data-aos="fade-up">
