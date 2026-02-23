@@ -46,9 +46,10 @@
                     </div>
                 </li>
                 <li><a href="{{ url('/contact') }}">Contact</a></li>
-                <li><a href="{{ route('admin.login') }}" class="nav-login-btn">Login <i class="fas fa-sign-in-alt"></i></a>
+                <li><a href="{{ route('admin.login') }}" class="nav-login-btn">Login <i class="fas fa-sign-in-alt"></i></a></li>
             </ul>
 
+            <div class="theme-toggle">
                 <i class="fas fa-sun"></i>
             </div>
         </div>
