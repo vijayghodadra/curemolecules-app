@@ -82,7 +82,6 @@
                         <li><a href="{{ url('/about') }}">About Us</a></li>
                         <li><a href="{{ route('products.index') }}">Products</a></li>
                         <li><a href="{{ url('/contact') }}">Contact Us</a></li>
-                        <li><a href="{{ route('admin.login') }}" class="nav-login-btn">Login <i class="fas fa-sign-in-alt"></i></a></li>
                     </ul>
                 </div>
 
