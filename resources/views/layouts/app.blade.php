@@ -46,6 +46,7 @@
                     </div>
                 </li>
                 <li><a href="{{ url('/contact') }}">Contact</a></li>
+                <li><a href="{{ route('admin.login') }}" class="nav-login-btn">Login <i class="fas fa-sign-in-alt"></i></a></li>
             </ul>
 
             <div class="theme-toggle">
@@ -151,31 +152,6 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Footer D logo — 3 clicks to open Admin Dashboard
-            const footerLogo = document.querySelector('.footer-logo-col img');
-            let clickCount = 0;
-            let clickTimer;
-            
-            if (footerLogo) {
-                footerLogo.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    clickCount++;
-                    
-                    if (clickCount === 1) {
-                        clickTimer = setTimeout(() => {
-                            clickCount = 0;
-                        }, 1000);
-                    }
-                    
-                    if (clickCount === 3) {
-                        clearTimeout(clickTimer);
-                        clickCount = 0;
-                        window.location.href = "{{ route('admin.login') }}";
-                    }
-                });
-                footerLogo.style.cursor = 'pointer';
-            }
-
             // Mobile Menu Toggle
             const menuToggle = document.getElementById('mobile-menu');
             const navMenu = document.querySelector('.nav-menu');
