@@ -46,16 +46,15 @@
                     </div>
                 </li>
                 <li><a href="{{ url('/contact') }}">Contact</a></li>
-                <li><a href="{{ route('admin.login') }}" class="nav-login-btn">Login <i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a href="{{ route('admin.login') }}" class="nav-login-btn">Login <i class="fas fa-sign-in-alt"></i></a>
             </ul>
 
-            
+                <i class="fas fa-sun"></i>
+            </div>
         </div>
     </header>
 
-
-
-    @yield('content')
+('content')
 
     <!-- Enhanced Footer -->
     <footer class="main-footer" data-aos="fade-up">
@@ -189,9 +188,39 @@
         }
     </script>
 
-    @yield('scripts')
+        <script>
+        // -- Theme Toggle ------------------------------
+        (function () {
+            const toggle = document.querySelector('.theme-toggle');
+            const body = document.body;
+            const ICON_DARK = '<i class="fas fa-moon"></i>';
+            const ICON_LIGHT = '<i class="fas fa-sun"></i>';
+
+            if (localStorage.getItem('theme') === 'light') {
+                body.classList.add('light-mode');
+                if (toggle) toggle.innerHTML = ICON_DARK;
+            } else {
+                if (toggle) toggle.innerHTML = ICON_LIGHT;
+            }
+
+            if (toggle) {
+                toggle.addEventListener('click', () => {
+                    body.classList.toggle('light-mode');
+                    const isLight = body.classList.contains('light-mode');
+                    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+                    toggle.innerHTML = isLight ? ICON_DARK : ICON_LIGHT;
+                });
+            }
+        })();
+    </script>
+
 </body>
 </html>
+
+
+
+
+
 
 
 
