@@ -1,0 +1,70 @@
+# =============================================================================
+# .dockerignore – keeps the Docker build context lean & fast
+# =============================================================================
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Docker files themselves (no need to copy into image)
+Dockerfile
+docker-compose.yml
+docker-compose.*.yml
+.dockerignore
+docker/
+
+# Laravel local dev files
+.env
+.env.*
+!.env.example
+
+# Composer – vendor is installed inside the image
+vendor/
+
+# Node / frontend build artefacts (if any)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# IDE / editor directories
+.vscode/
+.idea/
+*.swp
+*.swo
+*.DS_Store
+Thumbs.db
+
+# PHP logs & temp
+*.log
+storage/logs/*
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+bootstrap/cache/*
+
+# Tests
+tests/
+phpunit.xml
+.phpunit.result.cache
+.phpunit.cache/
+
+# Vercel / deployment artifacts
+.vercel/
+.vercelignore
+vercel.json
+
+# CI/CD
+.github/
+
+# Documentation
+README.md
+*.md
+
+# Misc
+*.sql
+*.txt
+db_test.php
+upgrade_database.php
+remove_logo.py
+seeder_error.txt

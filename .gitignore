@@ -21,3 +21,7 @@ npm-debug.log
 yarn-error.log
 # /database/*.sqlite
 .vercel
+
+# Docker
+.env.docker
+docker-compose.override.yml
