@@ -7,12 +7,10 @@
 .gitignore
 .gitattributes
 
-# Docker files themselves (no need to copy into image)
-Dockerfile
+# Docker compose & ignore files (root level only – NOT the docker/ config folder)
 docker-compose.yml
 docker-compose.*.yml
 .dockerignore
-docker/
 
 # Laravel local dev files
 .env
