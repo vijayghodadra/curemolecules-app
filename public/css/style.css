@@ -38,32 +38,33 @@
 /* ===========================
    LIGHT MODE overrides
 =========================== */
+body.light-mode {
+    --primary: #0d9488;
+    --primary-hover: #0f766e;
 
+    /* Navbar */
+    --nav-bg: rgba(255, 255, 255, 0.95);
+    --nav-border: rgba(0, 0, 0, 0.1);
+    --nav-link: #334155;
+    --nav-link-hover: #0d9488;
+    --nav-active-bg: rgba(13, 148, 136, 0.1);
+    --nav-active-color: #0d9488;
+    --dropdown-bg: #ffffff;
+    --dropdown-border: #e2e8f0;
+    --dropdown-text: #334155;
+    --dropdown-hover-bg: rgba(13, 148, 136, 0.08);
+    --toggle-bg: rgba(0, 0, 0, 0.05);
+    --toggle-color: #334155;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ===========================
-   LIGHT MODE overrides
-=========================== */
-
+    /* Page */
+    --bg-dark: #f8fafc;
+    --body-bg: #fdfdfd;
+    --text-white: #0f172a;
+    --text-gray: #475569;
+    --border-color: #e2e8f0;
+    --card-bg: #ffffff;
+    --section-alt: #f1f5f9;
+}
 
 * {
     margin: 0;
@@ -74,7 +75,6 @@
 html,
 body {
     overflow-x: hidden;
-    max-width: 100vw;
 }
 
 body {
@@ -386,13 +386,13 @@ header {
 
 @media (max-width: 480px) {
     .whatsapp-float {
-        right: auto;
-        left: 50%;
-        transform: translateX(-50%);
+        right: 20px;
+        left: auto;
+        transform: none;
     }
 
     .whatsapp-float:hover {
-        transform: translateX(-50%) scale(1.1);
+        transform: scale(1.1);
     }
 }
 
@@ -740,13 +740,8 @@ footer {
     }
 
     .nav-item.active .dropdown-menu {
-        display: block;
+        display: block !important;
         /* sub-menu toggle for mobile */
-    }
-
-    .nav-item:hover .dropdown-menu {
-        display: none;
-        /* Disable hover on mobile, rely on click */
     }
 
     /* Hero Adjustments */
@@ -1477,7 +1472,7 @@ footer {
 
 /* Filter Section */
 .products-filter-section {
-    background-color: #1e293b;
+    background-color: var(--card-bg);
     padding: 30px;
     border-radius: 12px;
     margin-bottom: 40px;
@@ -1508,7 +1503,7 @@ footer {
 
 .search-input {
     width: 100%;
-    background-color: #0f172a;
+    background-color: var(--bg-dark);
     border: 1px solid var(--border-color);
     padding: 12px 20px;
     border-radius: 6px;
@@ -1525,7 +1520,7 @@ footer {
 
 .filter-select {
     width: 100%;
-    background-color: #0f172a;
+    background-color: var(--bg-dark);
     border: 1px solid var(--border-color);
     padding: 12px 20px;
     border-radius: 6px;
@@ -1560,7 +1555,7 @@ footer {
 }
 
 .view-btn {
-    background-color: #1e293b;
+    background-color: var(--card-bg);
     border: 1px solid var(--border-color);
     color: var(--text-gray);
     width: 40px;
@@ -1575,14 +1570,14 @@ footer {
 
 .view-btn.active,
 .view-btn:hover {
-    background-color: #0f172a;
+    background-color: var(--bg-dark);
     color: var(--primary);
     border-color: var(--primary);
 }
 
 /* Enhanced Product Card */
 .product-card-enhanced {
-    background-color: #1e293b;
+    background-color: var(--card-bg);
     border: 1px solid var(--border-color);
     /* Dark border */
     border-radius: 12px;
@@ -1652,7 +1647,7 @@ footer {
 .pc-meta {
     margin-bottom: 15px;
     font-size: 0.85rem;
-    color: #cbd5e1;
+    color: var(--text-gray);
 }
 
 .pc-meta div {
@@ -1660,7 +1655,7 @@ footer {
 }
 
 .pc-meta strong {
-    color: var(--text-gray);
+    color: var(--text-white);
     /* Lighter label */
     font-weight: 600;
     margin-right: 5px;
@@ -1684,8 +1679,8 @@ footer {
 }
 
 .app-tag {
-    background-color: #0f172a;
-    color: #94a3b8;
+    background-color: var(--bg-dark);
+    color: var(--text-gray);
     /* Muted text */
     padding: 6px 12px;
     border-radius: 4px;
@@ -3160,5 +3155,201 @@ footer {
     }
 }
 
+/* --- Theme Contrast Fixes --- */
+body.light-mode .hero h1,
+body.light-mode .company-name-hero,
+body.light-mode .hero p,
+body.light-mode .hero .info-box p,
+body.light-mode .hero .highlight {
+    color: #ffffff !important;
+}
 
+body.light-mode .hero .badge-ip {
+    color: #86efac !important;
+}
 
+body.light-mode .hero .badge-bp {
+    color: #93c5fd !important;
+}
+
+body.light-mode .hero .badge-usp {
+    color: #d8b4fe !important;
+}
+
+/* Ensure other dark sections remain readable in light mode */
+body.light-mode .categories-section,
+body.light-mode .featured-section,
+body.light-mode .cert-section,
+body.light-mode .quality-commit-section,
+body.light-mode .mission-section,
+body.light-mode .why-us-section,
+body.light-mode .portfolio-section,
+body.light-mode .trading-services-section,
+body.light-mode .certifications-section,
+body.light-mode .quality-standards-section,
+body.light-mode .commitment-section,
+body.light-mode .logistics-banner-section,
+body.light-mode .logistics-features-section,
+body.light-mode .shipping-options-section,
+body.light-mode .promise-section {
+    background: var(--section-alt);
+}
+
+body.light-mode .category-card,
+body.light-mode .featured-card,
+body.light-mode .cert-card,
+body.light-mode .mission-card,
+body.light-mode .feature-box,
+body.light-mode .trading-card,
+body.light-mode .portfolio-card,
+body.light-mode .standard-card,
+body.light-mode .stat-card,
+body.light-mode .logistics-banner,
+body.light-mode .logistics-card,
+body.light-mode .shipping-card,
+body.light-mode .promise-banner,
+body.light-mode .quality-container {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+body.light-mode .section-header h2,
+body.light-mode .category-card h3,
+body.light-mode .f-title,
+body.light-mode .cert-card h3,
+body.light-mode .quality-title,
+body.light-mode .commitment-title,
+body.light-mode .stat-value,
+body.light-mode .footer-heading,
+body.light-mode .quality-item h4,
+body.light-mode .mission-card h3,
+body.light-mode .feature-box h4,
+body.light-mode .trading-card h3,
+body.light-mode .portfolio-card h3,
+body.light-mode .standard-card h3,
+body.light-mode .commitment-banner h2,
+body.light-mode .stat-card h3,
+body.light-mode .logistics-banner h2,
+body.light-mode .logistics-card h3,
+body.light-mode .shipping-card h3,
+body.light-mode .promise-banner h2,
+body.light-mode .cert-subtitle {
+    color: var(--text-white) !important;
+}
+
+/* Hardcoded grey/white fonts fix */
+body.light-mode .section-header p,
+body.light-mode .category-card p,
+body.light-mode .f-desc,
+body.light-mode .f-meta span,
+body.light-mode .f-meta strong,
+body.light-mode .cert-text,
+body.light-mode .quality-item p,
+body.light-mode .commitment-text,
+body.light-mode .stat-desc,
+body.light-mode .main-footer p,
+body.light-mode .footer-col p,
+body.light-mode .contact-info-list span,
+body.light-mode .powered-by span,
+body.light-mode .mission-card p,
+body.light-mode .feature-box p,
+body.light-mode .trading-card p,
+body.light-mode .standard-card p,
+body.light-mode .commitment-banner p,
+body.light-mode .stat-card p,
+body.light-mode .logistics-banner p,
+body.light-mode .logistics-card p,
+body.light-mode .shipping-card p,
+body.light-mode .promise-banner p {
+    color: var(--text-gray) !important;
+}
+
+body.light-mode .app-tag,
+body.light-mode .cat-badge,
+body.light-mode .valid-pill,
+body.light-mode .p-tag,
+body.light-mode .cert-badge,
+body.light-mode .shipping-badge {
+    background: rgba(0, 0, 0, 0.05) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    color: var(--text-gray) !important;
+}
+
+body.light-mode .portfolio-apps {
+    border-top-color: var(--border-color) !important;
+}
+
+body.light-mode .about-img {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+    border-color: var(--border-color) !important;
+}
+
+body.light-mode .q-icon-microscope {
+    color: #4f46e5 !important;
+}
+
+body.light-mode .q-icon-factory {
+    color: #dc2626 !important;
+}
+
+body.light-mode .q-icon-flask {
+    color: #059669 !important;
+}
+
+body.light-mode .q-icon-clipboard {
+    color: #d97706 !important;
+}
+
+body.light-mode .q-icon-chart {
+    color: #7c3aed !important;
+}
+
+/* Any missing section backgrounds */
+body.light-mode .stats-row-section,
+body.light-mode .main-footer,
+body.light-mode footer {
+    background-color: var(--card-bg) !important;
+    border-color: var(--border-color) !important;
+}
+
+body.light-mode .commitment-banner,
+body.light-mode .page-header,
+body.light-mode .contact-header-section,
+body.light-mode .contact-info-section,
+body.light-mode .request-form-section {
+    background: var(--section-alt) !important;
+}
+
+body.light-mode .contact-header-section h1,
+body.light-mode .breadcrumbs,
+body.light-mode .breadcrumbs a,
+body.light-mode .c-details h4,
+body.light-mode .request-form-section h2,
+body.light-mode .form-group label {
+    color: var(--text-white) !important;
+}
+
+body.light-mode .form-group input,
+body.light-mode .form-group textarea,
+body.light-mode .form-group select {
+    background-color: var(--card-bg) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-white) !important;
+}
+
+body.light-mode .checkbox-item,
+body.light-mode .form-instruction {
+    color: var(--text-gray) !important;
+}
+
+body.light-mode .c-icon {
+    background: rgba(13, 148, 136, 0.1) !important;
+}
+
+body.light-mode .contact-map {
+    border-color: var(--border-color) !important;
+}
+
+body.light-mode .footer-bottom {
+    border-top: 1px solid var(--border-color) !important;
+}

@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Performance Optimization: Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://img.icons8.com">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ config('app.name', 'DevSeas Global') }} - @yield('title', 'High-Purity Pharmaceutical APIs & Excipients')</title>
@@ -17,7 +25,8 @@
     <header>
         <div class="container navbar">
             <a href="{{ route('home') }}" class="logo-container" style="text-decoration: none;">
-                <img src="{{ asset('assets/images/DEVSEAS logo.png') }}" alt="DevSeas Global" class="site-logo">
+                <img src="{{ asset('assets/images/DEVSEAS logo.png') }}" alt="DevSeas Global" class="site-logo"
+                    style="height: 40px; width: 40" loading="eager">
             </a>
 
             <div class="menu-toggle" id="mobile-menu">
@@ -49,7 +58,9 @@
                 <li><a href="{{ route('admin.login') }}" class="nav-login-btn">Login <i class="fas fa-sign-in-alt"></i></a></li>
             </ul>
 
-            
+            <div class="theme-toggle">
+                <i class="fas fa-sun"></i>
+            </div>
         </div>
     </header>
 
@@ -61,8 +72,7 @@
             <div class="footer-top">
                 <div class="footer-logo-col">
                     <div class="logo-container" style="background: transparent; color: white; padding: 0;">
-                        <img src="{{ asset('assets/images/DEVSEAS logo.png') }}" alt="DevSeas" style="height:40px; width:auto;">
-
+                        <img src="{{ asset('assets/images/DEVSEAS logo.png') }}" alt="DevSeas" style="height:40px; width:auto;" loading="lazy">
                     </div>
                     <p>We are committed to empowering businesses worldwide by offering premium export solutions tailored to their unique needs. With extensive experience and a profound understanding of international markets, we take pride in delivering exceptional service, unmatched reliability, and outstanding value.</p>
                     <div class="social-icons">
@@ -125,15 +135,20 @@
                 <div class="powered-by" style="display: flex; align-items: center; gap: 10px; font-size: 0.9em; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px; width: 100%; justify-content: center;">
                     <span style="color: #cbd5e1;">Powered by TejasKP AI Software</span>
                     <a href="https://tejaskp.in/login" target="_blank" style="text-decoration: none;">
-                        <img src="{{ asset('assets/images/tejaskp_logo.png') }}" alt="TejasKP AI Software" style="height: 25px; vertical-align: middle; filter: drop-shadow(0 0 2px rgba(255,255,255,0.3));">
+                        <img src="{{ asset('assets/images/tejaskp_logo.png') }}" alt="TejasKP AI Software" style="height: 25px; vertical-align: middle; filter: drop-shadow(0 0 2px rgba(255,255,255,0.3));" loading="lazy">
                     </a>
                 </div>
             </div>
         </div>
     </footer>
 
-    
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/916352322122" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
+    <!-- Scripts oriented for performance -->
+    <script src="{{ asset('js/script.js') }}" defer></script>
     <!-- Antigravity: AOS Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -145,60 +160,6 @@
         });
     </script>
 
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Mobile Menu Toggle
-            const menuToggle = document.getElementById('mobile-menu');
-            const navMenu = document.querySelector('.nav-menu');
-
-            if (menuToggle && navMenu) {
-                menuToggle.addEventListener('click', () => {
-                    navMenu.classList.toggle('active');
-                    const icon = menuToggle.querySelector('i');
-                    if (navMenu.classList.contains('active')) {
-                        icon.classList.remove('fa-bars');
-                        icon.classList.add('fa-times');
-                    } else {
-                        icon.classList.remove('fa-times');
-                        icon.classList.add('fa-bars');
-                    }
-                });
-            }
-        });
-
-        // Mobile Dropdown Toggle (Global function called by onclick)
-        function toggleDropdown(e, link) {
-            if (window.innerWidth <= 992) {
-                const parent = link.parentElement;
-                const dropdown = parent.querySelector('.dropdown-menu');
-                
-                // Only prevent navigation and show dropdown if a dropdown menu exists
-                if (dropdown) {
-                    e.preventDefault();
-                    parent.classList.toggle('active');
-
-                    // Close other dropdowns
-                    document.querySelectorAll('.nav-item').forEach(item => {
-                        if (item !== parent) item.classList.remove('active');
-                    });
-                }
-            }
-        }
-    </script>
-
-        
-
+    @yield('scripts')
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-

@@ -6,27 +6,32 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content" data-aos="fade-up">
-                <h1>DevSeas Global</h1>
-                <p class="company-name-hero">"Global Reach, Diverse Products"</p>
-                <p class="company-name-hero" style="font-style: italic;">"Delivering Quality Across Continents."</p>
+            <div class="hero-wrapper" style="display:flex; align-items:center; gap:2rem;">
+                <!-- Left: Text Content -->
+                <div class="hero-content" data-aos="fade-right" style="flex:1;">
+                    <h1>DevSeas Global</h1>
+                    <p class="company-name-hero">"Global Reach, Diverse Products"</p>
+                    <p class="company-name-hero" style="font-style: italic;">"Delivering Quality Across Continents."</p>
 
-                <div class="info-box" data-aos="fade-up" data-aos-delay="200">
-                    <p>
-                        <i class="fas fa-check-circle" style="color: var(--primary);"></i>
-                        <span class="highlight">DevSeas Global specializes in premium export solutions</span> — connecting international markets with reliable, efficient, and high-quality products tailored to every business need.
-                    </p>
-                </div>
+                    <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+                        <p>
+                            <i class="fas fa-check-circle" style="color: var(--primary);"></i>
+                            <span class="highlight">DevSeas Global specializes in premium export solutions</span> — 
+                            connecting international markets with reliable, efficient, and high-quality products 
+                            tailored to every business need.
+                        </p>
+                    </div>
 
-                <div class="badges" data-aos="fade-up" data-aos-delay="400">
-                    <div class="badge badge-ip"><i class="fas fa-check"></i> IP Grade</div>
-                    <div class="badge badge-bp"><i class="fas fa-check"></i> BP Grade</div>
-                    <div class="badge badge-usp"><i class="fas fa-check"></i> USP Grade</div>
-                </div>
+                    <div class="badges" data-aos="fade-up" data-aos-delay="400">
+                        <div class="badge badge-ip"><i class="fas fa-check"></i> IP Grade</div>
+                        <div class="badge badge-bp"><i class="fas fa-check"></i> BP Grade</div>
+                        <div class="badge badge-usp"><i class="fas fa-check"></i> USP Grade</div>
+                    </div>
 
-                <div class="cta-buttons" data-aos="fade-up" data-aos-delay="600">
-                    <a href="{{ route('products.index') }}" class="btn btn-primary">View Products</a>
-                    <a href="{{ url('/contact') }}" class="btn btn-outline">Contact Us</a>
+                    <div class="cta-buttons" data-aos="fade-up" data-aos-delay="600">
+                        <a href="{{ route('products.index') }}" class="btn btn-primary">View Products</a>
+                        <a href="{{ url('/contact') }}" class="btn btn-outline">Contact Us</a>
+                    </div>
                 </div>
             </div>
         </div>

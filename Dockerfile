@@ -97,6 +97,16 @@ COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 # ---------------------------------------------------------------------------
+# Default Production Environment (can be overridden by Render)
+# ---------------------------------------------------------------------------
+ENV APP_ENV=production
+ENV APP_DEBUG=false
+ENV LOG_CHANNEL=stderr
+ENV DB_CONNECTION=pgsql
+ENV SESSION_DRIVER=cookie
+ENV CACHE_STORE=file
+
+# ---------------------------------------------------------------------------
 # Expose port & start
 # ---------------------------------------------------------------------------
 EXPOSE 80
