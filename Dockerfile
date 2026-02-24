@@ -8,11 +8,12 @@ WORKDIR /app
 # Copy only files needed for dependency resolution first (better layer caching)
 COPY composer.json composer.lock ./
 
-# Install production dependencies only (skip dev)
+# Install production dependencies only (skip dev & scripts)
 RUN composer install \
     --no-dev \
     --no-interaction \
     --no-progress \
+    --no-scripts \
     --optimize-autoloader \
     --ignore-platform-reqs
 
